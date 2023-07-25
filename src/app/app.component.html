@@ -2,12 +2,10 @@
   <div class="row">
       <div class="col mt-5 col-xs-6 col-md-6 col-lg-6">
         <h2>Check Password Strength</h2>
-      <form [formGroup]="signupForm">
+      <form [formGroup]="passwordForm">
         <div class="form-group">
           <input type="password" class="form-control" formControlName="password" autocomplete="off" placeholder="Enter your password">
-          <app-password-validation 
-            [passwordToCheck]="signupForm.value.password">
-          </app-password-validation>
+          <password-validation [passwordToCheck]="passwordForm.value.password"></password-validation>
         </div>
       </form>
     </div>
